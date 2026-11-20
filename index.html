@@ -40,12 +40,56 @@ h1{font-size:clamp(63px,7.3vw,110px);line-height:.93;letter-spacing:-1.9px;margi
 @media(max-width:560px){.shell{padding:0 19px}header{padding-top:15px;padding-bottom:14px}.brand{font-size:15px;gap:9px}.brand-mark{min-width:40px;height:40px;font-size:15px}.mini-pill{display:none}.sound-btn{font-size:10px;padding:9px}.hero{padding:31px 0 47px;gap:17px}.eyebrow{font-size:9px;letter-spacing:1.7px}.eyebrow:before{width:23px}h1{font-size:clamp(55px,14vw,79px);letter-spacing:-1.3px;margin:24px 0 19px}.lead{font-size:13.5px;line-height:1.85}.question{font-size:21px;margin:18px 0 10px}.btn{font-size:11px;padding:14px 17px}.answers{gap:9px}#yesBtn{min-width:157px}.little-out{font-size:10px;margin-top:10px}.art-stage{width:100%;max-width:420px;margin:0 auto}.cat-card{border-width:7px}.cat-card-head{font-size:7px;top:8px;left:8px;right:8px}.cat-card-bottom{font-size:10px;padding:8px 1px 6px}.shark-card{border-width:6px}.shark-card-top{font-size:7px;left:7px;right:7px;top:5px}.shark-card-bottom{font-size:9px;padding:6px 2px}.gold-disc{border-width:2px}.gold-disc b{font-size:clamp(37px,11vw,53px)}.gold-disc span{font-size:7px}.art-edition{font-size:9px;padding:7px 9px}.art-caption{font-size:8px;padding:6px 7px}.car-wink{font-size:7px;padding:6px}.foot{flex-direction:column;gap:5px;font-size:10px}.foot span:last-child{font-size:12px}.planner-wrap{margin:17px auto 37px}.panel-top{padding:23px 19px 19px}.panel h2{font-size:clamp(36px,9vw,48px)}.panel-content{padding:22px 15px;min-height:320px}.choice-grid,.choice-grid.food,.choice-grid.concepts,.choice-grid.extras{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.choice{min-height:117px;padding:12px 10px}.choice .emoji{font-size:22px}.choice .name{font-size:12px}.choice .hint{font-size:10px}.date-grid{grid-template-columns:1fr;gap:14px}.panel-nav{padding:17px 15px;justify-content:space-between}.panel-nav .btn{padding:12px}.error{order:3;flex-basis:100%;text-align:left}.ticket{grid-template-columns:1fr}.ticket-intro h2{font-size:57px}.ticket-left{padding:25px 19px}.ticket-left:after{inset:5px}.ticket-heading h3{font-size:34px}.serial{font-size:8px;letter-spacing:0}.ticket-data{gap:18px 12px}.ticket-value{font-size:12px}.ticket-right{border-left:0;border-top:2px dashed #806849;min-height:160px;display:grid;grid-template-columns:1fr 2fr;gap:7px;padding:18px}.ticket-right:before,.ticket-right:after{top:-13px;bottom:auto}.ticket-right:before{left:-13px}.ticket-right:after{right:-13px;left:auto}.ticket-444{font-size:48px;letter-spacing:-4px}.ticket-mini{font-size:8px}.barcode{height:46px}.ticket-fine{grid-column:1/-1}.decline-box{padding:27px 18px;margin:35px auto}.decline-box h2{font-size:48px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
-/* Invitation redesign: unprinted beige center, dark leopard print around it. */
+
+/* Homepage option 1: an editorial leopard print fading into the beige centre.
+   Same spot artwork as the ribbon, with its tan background removed. */
 body.proposal-active{background:#f6f0e5}
-body.proposal-active .sky{background-color:#f6f0e5;background-image:var(--leopard-spots);background-position:center center;background-repeat:repeat;background-size:150px 142px}
-body.proposal-active .sky:after{display:none}
-#proposalScreen .hero{display:flex;align-items:center;justify-content:center;min-height:max(670px,calc(100svh - 174px));padding:70px 0 85px;gap:0}
-#proposalScreen .hero-copy{box-sizing:border-box;width:min(100%,780px);max-width:780px;margin:0 auto;padding:clamp(44px,5vw,68px) clamp(26px,5.5vw,78px);background:#f6f0e5;box-shadow:0 0 0 12px #f6f0e5;text-align:center;position:relative}
+body.proposal-active .sky{
+  background:#f6f0e5;
+}
+body.proposal-active .sky::after{
+  display:block;
+  content:"";
+  opacity:1;
+  position:absolute;
+  inset:0;
+  background-image:var(--leopard-spots);
+  background-position:center center;
+  background-repeat:repeat;
+  background-size:150px 142px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 54%,transparent 0%,transparent 54%,rgba(0,0,0,.11) 69%,rgba(0,0,0,.64) 87%,#000 100%);
+  mask-image:radial-gradient(ellipse 70% 65% at 50% 54%,transparent 0%,transparent 54%,rgba(0,0,0,.11) 69%,rgba(0,0,0,.64) 87%,#000 100%);
+}
+#proposalScreen .hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:max(670px,calc(100svh - 174px));
+  padding:70px 0 85px;
+  gap:0;
+}
+#proposalScreen .hero-copy{
+  box-sizing:border-box;
+  width:min(100%,780px);
+  max-width:780px;
+  margin:0 auto;
+  padding:clamp(40px,5vw,65px) clamp(25px,5vw,68px);
+  text-align:center;
+  position:relative;
+  isolation:isolate;
+  background:transparent;
+  box-shadow:none;
+}
+/* No rectangle: a soft, seamless beige veil protects the writing if the
+   patterned edge comes close on unusual aspect ratios. */
+#proposalScreen .hero-copy::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  inset:-35px -65px;
+  background:radial-gradient(ellipse closest-side,#f6f0e5 0%,#f6f0e5 58%,rgba(246,240,229,.93) 73%,rgba(246,240,229,0) 100%);
+}
 #proposalScreen .eyebrow{justify-content:center}
 #proposalScreen h1{font-size:clamp(54px,7.1vw,96px);line-height:.97;margin:28px 0 29px}
 #proposalScreen .lead{max-width:620px;margin:0 auto 13px;line-height:1.85}
@@ -54,8 +98,27 @@ body.proposal-active .sky:after{display:none}
 #proposalScreen #yesBtn{transform-origin:center center}
 #proposalScreen .little-out{max-width:590px;margin:14px auto 0}
 #proposalScreen .little-out.decline-note{margin-top:8px}
-@media(max-width:810px){#proposalScreen .hero{min-height:calc(100svh - 155px);padding:56px 18px 67px}#proposalScreen .hero-copy{padding:38px 28px;max-width:650px}#proposalScreen h1{font-size:clamp(54px,9.4vw,80px)}}
-@media(max-width:560px){body.proposal-active .sky{background-size:115px 109px}#proposalScreen .hero{min-height:calc(100svh - 125px);padding:42px 12px 60px}#proposalScreen .hero-copy{padding:33px 16px;box-shadow:0 0 0 8px #f6f0e5}#proposalScreen h1{font-size:clamp(50px,12.2vw,68px);margin:21px 0 24px}#proposalScreen .lead{font-size:13.5px;line-height:1.75}#proposalScreen .question{font-size:22px;margin:22px 0 14px}#proposalScreen .answers{gap:10px}#proposalScreen #yesBtn{min-width:158px}#proposalScreen .little-out{font-size:10.5px}}
+@media(max-width:810px){
+  #proposalScreen .hero{min-height:calc(100svh - 155px);padding:56px 18px 67px}
+  #proposalScreen .hero-copy{padding:38px 28px;max-width:650px}
+  #proposalScreen h1{font-size:clamp(54px,9.4vw,80px)}
+}
+@media(max-width:560px){
+  body.proposal-active .sky::after{
+    background-size:116px 110px;
+    -webkit-mask-image:radial-gradient(ellipse 82% 63% at 50% 52%,transparent 0%,transparent 57%,rgba(0,0,0,.14) 72%,#000 100%);
+    mask-image:radial-gradient(ellipse 82% 63% at 50% 52%,transparent 0%,transparent 57%,rgba(0,0,0,.14) 72%,#000 100%);
+  }
+  #proposalScreen .hero{min-height:calc(100svh - 125px);padding:42px 12px 60px}
+  #proposalScreen .hero-copy{padding:33px 16px}
+  #proposalScreen .hero-copy::before{inset:-26px -12px}
+  #proposalScreen h1{font-size:clamp(50px,12.2vw,68px);margin:21px 0 24px}
+  #proposalScreen .lead{font-size:13.5px;line-height:1.75}
+  #proposalScreen .question{font-size:22px;margin:22px 0 14px}
+  #proposalScreen .answers{gap:10px}
+  #proposalScreen #yesBtn{min-width:158px}
+  #proposalScreen .little-out{font-size:10.5px}
+}
 @media print{.ribbon,header,.foot,.ticket-actions,.ticket-intro,.ticket-disclaimer,.sky,#confetti{display:none!important}body{background:white}.shell{max-width:none;padding:0}.screen:not(#ticketScreen){display:none!important}#ticketScreen{display:block!important}.ticket-section{margin:0;max-width:none}.ticket{filter:none;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style>
 </head>
