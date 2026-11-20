@@ -8,6 +8,7 @@
   <title>444 — A Question For You</title>
   <style>
 /* Self-contained fonts: no network requests required. */
+:root{--leopard-spots:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22174%22%20height%3D%22165%22%20viewBox%3D%220%200%20174%20165%22%3E%3Cg%20fill%3D%22%234f382c%22%20opacity%3D%22.95%22%3E%3Cpath%20d%3D%22M19%2025q14-15%2029%200t-3%2027q-22%209-32-5z%22%2F%3E%3Cpath%20d%3D%22M108%2015q13-8%2022%204t-4%2021q-16%207-26-3z%22%2F%3E%3Cpath%20d%3D%22M65%2087q19-13%2032%206t-6%2026q-25%208-33-10z%22%2F%3E%3Cpath%20d%3D%22M130%20114q14-16%2027-2t-3%2028q-21%209-30-6z%22%2F%3E%3Cpath%20d%3D%22M-3%20111q17-6%2027%208t-4%2022q-16%203-22-10z%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2332231f%22%20stroke-width%3D%228%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M13%2026q-2%2010%204%2017m8-29q15-6%2025%206m-3%2022q-5%2011-16%2013%22%2F%3E%3Cpath%20d%3D%22M101%2019q1-12%2015-12m12%205q13%2010%2010%2020m-17%2013q-11%202-17-5%22%2F%3E%3Cpath%20d%3D%22M59%2089q13-16%2031-9m13%2014q7%2012-4%2022m-18%2013q-15%200-23-11%22%2F%3E%3Cpath%20d%3D%22M130%20109q-1-9%2012-14m13%208q15%207%2012%2021m-17%2020q-14%204-22-6%22%2F%3E%3Cpath%20d%3D%22M-2%20111q14-6%2022%200m8%2012q5%2011-4%2019%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2331231e%22%3E%3Cpath%20d%3D%22M151%2057q12-8%2015%205t-14%2010q-9-3-1-15z%22%2F%3E%3Cpath%20d%3D%22M39%2071q9-7%2013%203t-12%208q-6-3-1-11z%22%2F%3E%3Cpath%20d%3D%22M112%2067q7-4%2010%204t-9%208q-8-2-1-12z%22%2F%3E%3Cpath%20d%3D%22M31%20149q12-7%2016%206t-14%207q-8-3-2-13z%22%2F%3E%3Cpath%20d%3D%22M4%2069q8-8%2013%201t-10%209q-8-1-3-10z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
 :root{--ink:#30251f;--ink2:#523e34;--muted:#796d62;--gold:#b68d55;--gold2:#d8bb7b;--ivory:#fbf8f1;--cream:#f6f0e5;--paper:#fffdfa;--blue:#91b8c0;--line:#d9ccb9;--white:#fffdfa;--shadow:0 22px 70px rgba(61,42,27,.14);--leopard:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22174%22%20height%3D%22165%22%20viewBox%3D%220%200%20174%20165%22%3E%3Crect%20width%3D%22174%22%20height%3D%22165%22%20fill%3D%22%23c99d62%22%2F%3E%3Cg%20fill%3D%22%23a77740%22%20opacity%3D%22.8%22%3E%3Cpath%20d%3D%22M19%2025q14-15%2029%200t-3%2027q-22%209-32-5z%22%2F%3E%3Cpath%20d%3D%22M108%2015q13-8%2022%204t-4%2021q-16%207-26-3z%22%2F%3E%3Cpath%20d%3D%22M65%2087q19-13%2032%206t-6%2026q-25%208-33-10z%22%2F%3E%3Cpath%20d%3D%22M130%20114q14-16%2027-2t-3%2028q-21%209-30-6z%22%2F%3E%3Cpath%20d%3D%22M-3%20111q17-6%2027%208t-4%2022q-16%203-22-10z%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2332231f%22%20stroke-width%3D%228%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M13%2026q-2%2010%204%2017m8-29q15-6%2025%206m-3%2022q-5%2011-16%2013%22%2F%3E%3Cpath%20d%3D%22M101%2019q1-12%2015-12m12%205q13%2010%2010%2020m-17%2013q-11%202-17-5%22%2F%3E%3Cpath%20d%3D%22M59%2089q13-16%2031-9m13%2014q7%2012-4%2022m-18%2013q-15%200-23-11%22%2F%3E%3Cpath%20d%3D%22M130%20109q-1-9%2012-14m13%208q15%207%2012%2021m-17%2020q-14%204-22-6%22%2F%3E%3Cpath%20d%3D%22M-2%20111q14-6%2022%200m8%2012q5%2011-4%2019%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2331231e%22%3E%3Cpath%20d%3D%22M151%2057q12-8%2015%205t-14%2010q-9-3-1-15z%22%2F%3E%3Cpath%20d%3D%22M39%2071q9-7%2013%203t-12%208q-6-3-1-11z%22%2F%3E%3Cpath%20d%3D%22M112%2067q7-4%2010%204t-9%208q-8-2-1-12z%22%2F%3E%3Cpath%20d%3D%22M31%20149q12-7%2016%206t-14%207q-8-3-2-13z%22%2F%3E%3Cpath%20d%3D%22M4%2069q8-8%2013%201t-10%209q-8-1-3-10z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--ink);background:#f5f0e7;font-family:Arial,'Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}
 button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ad8b58;outline-offset:3px}.hidden,[hidden]{display:none!important}.shell{max-width:1190px;padding:0 32px;margin:0 auto}
@@ -38,10 +39,27 @@ h1{font-size:clamp(63px,7.3vw,110px);line-height:.93;letter-spacing:-1.9px;margi
 @media(max-width:810px){.hero{grid-template-columns:1fr;gap:6px;padding-top:44px}.hero-copy{max-width:650px}.art-stage{width:min(100%,505px);margin:0 auto}.panel-content,.panel-top,.panel-nav{padding-left:27px;padding-right:27px}}
 @media(max-width:560px){.shell{padding:0 19px}header{padding-top:15px;padding-bottom:14px}.brand{font-size:15px;gap:9px}.brand-mark{min-width:40px;height:40px;font-size:15px}.mini-pill{display:none}.sound-btn{font-size:10px;padding:9px}.hero{padding:31px 0 47px;gap:17px}.eyebrow{font-size:9px;letter-spacing:1.7px}.eyebrow:before{width:23px}h1{font-size:clamp(55px,14vw,79px);letter-spacing:-1.3px;margin:24px 0 19px}.lead{font-size:13.5px;line-height:1.85}.question{font-size:21px;margin:18px 0 10px}.btn{font-size:11px;padding:14px 17px}.answers{gap:9px}#yesBtn{min-width:157px}.little-out{font-size:10px;margin-top:10px}.art-stage{width:100%;max-width:420px;margin:0 auto}.cat-card{border-width:7px}.cat-card-head{font-size:7px;top:8px;left:8px;right:8px}.cat-card-bottom{font-size:10px;padding:8px 1px 6px}.shark-card{border-width:6px}.shark-card-top{font-size:7px;left:7px;right:7px;top:5px}.shark-card-bottom{font-size:9px;padding:6px 2px}.gold-disc{border-width:2px}.gold-disc b{font-size:clamp(37px,11vw,53px)}.gold-disc span{font-size:7px}.art-edition{font-size:9px;padding:7px 9px}.art-caption{font-size:8px;padding:6px 7px}.car-wink{font-size:7px;padding:6px}.foot{flex-direction:column;gap:5px;font-size:10px}.foot span:last-child{font-size:12px}.planner-wrap{margin:17px auto 37px}.panel-top{padding:23px 19px 19px}.panel h2{font-size:clamp(36px,9vw,48px)}.panel-content{padding:22px 15px;min-height:320px}.choice-grid,.choice-grid.food,.choice-grid.concepts,.choice-grid.extras{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.choice{min-height:117px;padding:12px 10px}.choice .emoji{font-size:22px}.choice .name{font-size:12px}.choice .hint{font-size:10px}.date-grid{grid-template-columns:1fr;gap:14px}.panel-nav{padding:17px 15px;justify-content:space-between}.panel-nav .btn{padding:12px}.error{order:3;flex-basis:100%;text-align:left}.ticket{grid-template-columns:1fr}.ticket-intro h2{font-size:57px}.ticket-left{padding:25px 19px}.ticket-left:after{inset:5px}.ticket-heading h3{font-size:34px}.serial{font-size:8px;letter-spacing:0}.ticket-data{gap:18px 12px}.ticket-value{font-size:12px}.ticket-right{border-left:0;border-top:2px dashed #806849;min-height:160px;display:grid;grid-template-columns:1fr 2fr;gap:7px;padding:18px}.ticket-right:before,.ticket-right:after{top:-13px;bottom:auto}.ticket-right:before{left:-13px}.ticket-right:after{right:-13px;left:auto}.ticket-444{font-size:48px;letter-spacing:-4px}.ticket-mini{font-size:8px}.barcode{height:46px}.ticket-fine{grid-column:1/-1}.decline-box{padding:27px 18px;margin:35px auto}.decline-box h2{font-size:48px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Invitation redesign: unprinted beige center, dark leopard print around it. */
+body.proposal-active{background:#f6f0e5}
+body.proposal-active .sky{background-color:#f6f0e5;background-image:var(--leopard-spots);background-position:center center;background-repeat:repeat;background-size:150px 142px}
+body.proposal-active .sky:after{display:none}
+#proposalScreen .hero{display:flex;align-items:center;justify-content:center;min-height:max(670px,calc(100svh - 174px));padding:70px 0 85px;gap:0}
+#proposalScreen .hero-copy{box-sizing:border-box;width:min(100%,780px);max-width:780px;margin:0 auto;padding:clamp(44px,5vw,68px) clamp(26px,5.5vw,78px);background:#f6f0e5;box-shadow:0 0 0 12px #f6f0e5;text-align:center;position:relative}
+#proposalScreen .eyebrow{justify-content:center}
+#proposalScreen h1{font-size:clamp(54px,7.1vw,96px);line-height:.97;margin:28px 0 29px}
+#proposalScreen .lead{max-width:620px;margin:0 auto 13px;line-height:1.85}
+#proposalScreen .question{font-size:clamp(22px,2.8vw,29px);margin:25px auto 16px}
+#proposalScreen .answers{justify-content:center;gap:14px}
+#proposalScreen #yesBtn{transform-origin:center center}
+#proposalScreen .little-out{max-width:590px;margin:14px auto 0}
+#proposalScreen .little-out.decline-note{margin-top:8px}
+@media(max-width:810px){#proposalScreen .hero{min-height:calc(100svh - 155px);padding:56px 18px 67px}#proposalScreen .hero-copy{padding:38px 28px;max-width:650px}#proposalScreen h1{font-size:clamp(54px,9.4vw,80px)}}
+@media(max-width:560px){body.proposal-active .sky{background-size:115px 109px}#proposalScreen .hero{min-height:calc(100svh - 125px);padding:42px 12px 60px}#proposalScreen .hero-copy{padding:33px 16px;box-shadow:0 0 0 8px #f6f0e5}#proposalScreen h1{font-size:clamp(50px,12.2vw,68px);margin:21px 0 24px}#proposalScreen .lead{font-size:13.5px;line-height:1.75}#proposalScreen .question{font-size:22px;margin:22px 0 14px}#proposalScreen .answers{gap:10px}#proposalScreen #yesBtn{min-width:158px}#proposalScreen .little-out{font-size:10.5px}}
 @media print{.ribbon,header,.foot,.ticket-actions,.ticket-intro,.ticket-disclaimer,.sky,#confetti{display:none!important}body{background:white}.shell{max-width:none;padding:0}.screen:not(#ticketScreen){display:none!important}#ticketScreen{display:block!important}.ticket-section{margin:0;max-width:none}.ticket{filter:none;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style>
 </head>
-<body>
+<body class="proposal-active">
   <div class="sky" aria-hidden="true"></div>
   <canvas id="confetti" aria-hidden="true"></canvas>
   <div class="ribbon" aria-hidden="true"></div>
@@ -62,36 +80,7 @@ h1{font-size:clamp(63px,7.3vw,110px);line-height:.93;letter-spacing:-1.9px;margi
       <p class="little-out" id="noComment" aria-live="polite">I apologise in advance for the other button.</p>
       <p class="little-out decline-note">But actually, no pressure. <button class="text-link" id="realNoBtn" type="button">You can say no here.</button></p>
     </div>
-    <div class="art-stage" aria-label="Original illustrations inspired by her orange cat in the shark hood, shark documentaries, a little leopard print and her lucky number 444">
-      <div class="art-print" aria-hidden="true"></div>
-      <div class="art-edition">ONE OF ONE / 444</div>
-      <figure class="cat-card"><div class="cat-card-head"><span>THE ORANGE BOY</span><span>EST. 3 YEARS AGO</span></div><svg class="cat-svg" viewBox="0 0 350 365" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustration of an orange cat poking out of a pale blue shark hood">
-<defs><radialGradient id="glow" cx="50%" cy="43%" r="60%"><stop stop-color="#fff1cd"/><stop offset="1" stop-color="#e9cc9c"/></radialGradient><linearGradient id="hood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c0d8dc"/><stop offset="1" stop-color="#7699a8"/></linearGradient><linearGradient id="cat" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#efb074"/><stop offset="1" stop-color="#ce7d4a"/></linearGradient></defs>
-<circle cx="175" cy="174" r="146" fill="url(#glow)"/><circle cx="175" cy="174" r="130" fill="none" stroke="#ab8f69" stroke-opacity=".4" stroke-dasharray="2 6"/>
-<!-- Little shark fin and a soft blue hood around the actual cat, just like that photo. -->
-<path d="M170 86L198 18 229 98Z" fill="#7f9fad" stroke="#547787" stroke-width="3"/>
-<path d="M46 298C44 171 91 81 175 76c93-4 132 104 131 220l-58 30H97Z" fill="url(#hood)" stroke="#547787" stroke-width="4"/>
-<path d="M80 216C74 143 118 106 173 100c66-5 116 46 113 111-1 66-46 107-109 111-60 1-103-39-97-106Z" fill="#f8e7cd" stroke="#4b6e7d" stroke-width="6"/>
-<path d="M105 143L120 166 134 143 151 164 166 143 183 164 199 142 215 160 230 143 247 163 264 147" fill="none" stroke="#fffef9" stroke-width="14" stroke-linejoin="miter"/>
-<path d="M119 192L108 131 150 154Z" fill="url(#cat)" stroke="#a7613e" stroke-width="4"/><path d="M236 191L246 130 205 153Z" fill="url(#cat)" stroke="#a7613e" stroke-width="4"/><path d="M122 162L118 143 140 155ZM231 162L238 141 214 157Z" fill="#d88970"/>
-<ellipse cx="176" cy="218" rx="82" ry="83" fill="url(#cat)" stroke="#a9653f" stroke-width="3"/>
-<path d="M165 150l-7 28M181 145l2 29M198 151l8 24M118 207l25-4M116 221l22-1M214 205l26 5M216 222l24 2" fill="none" stroke="#b86739" stroke-width="8" stroke-linecap="round" opacity=".72"/>
-<path d="M132 213q16 10 31 0M190 214q16 10 31-1" stroke="#48372e" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M167 239q10-8 20 0l-10 10Z" fill="#9b584d"/><path d="M176 251v9m0 0q-10 11-24 0m24 0q10 11 24 0" stroke="#48372e" stroke-width="3" fill="none" stroke-linecap="round"/>
-<path d="M135 249l-45-12M134 260l-48 1M216 249l45-11M217 260l50 3" stroke="#6b4b3d" stroke-width="2" stroke-linecap="round"/>
-<path d="M88 289q3 47 49 54M267 288q-4 48-45 56" stroke="#547787" stroke-width="9" fill="none" stroke-linecap="round"/><ellipse cx="141" cy="315" rx="23" ry="15" fill="#e8a16a" transform="rotate(-14 141 315)"/><ellipse cx="224" cy="312" rx="23" ry="15" fill="#e8a16a" transform="rotate(12 224 312)"/><path d="M133 319l-2 9m10-8v10m81-11v11m9-12l2 9" stroke="#ae6742" stroke-width="2"/>
-<ellipse cx="270" cy="121" rx="5" ry="5" fill="#354953"/><path d="M277 149l-18 1 13 16Z" fill="#f9f7ee"/><g fill="#a47c4b" opacity=".6"><path d="M76 92l4-13 6 13 12 5-12 5-6 12-5-12-12-5z"/><circle cx="282" cy="78" r="3"/></g></svg><figcaption class="cat-card-bottom">yes, the shark hood incident.</figcaption></figure>
-      <figure class="shark-card"><div class="shark-card-top"><span>AFTER HOURS</span><span>SHARK CLUB</span></div><svg class="shark-svg" viewBox="0 0 290 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a shark swimming in deep teal water">
-<defs><linearGradient id="sharkG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9c7c7"/><stop offset="1" stop-color="#6c99a5"/></linearGradient></defs>
-<g stroke="#9bb9bd" stroke-opacity=".28" fill="none"><path d="M0 55q65-18 123 0t167 0M0 98q86-20 142 0t148 0M0 171q65-19 123 0t167 0"/><path d="M20 35c16 8 31 8 47 0m148 139c17 8 35 8 51 0"/></g><circle cx="260" cy="47" r="23" fill="#86a5ad" opacity=".12"/>
-<!-- A recognisable shark silhouette, not an emoji. -->
-<path d="M37 119C61 84 137 81 207 99L267 63 249 112 265 167 208 137C145 158 80 150 41 127L13 140 23 116Z" fill="url(#sharkG)" stroke="#c7d6d1" stroke-width="2"/>
-<path d="M109 94 162 36 172 96" fill="#92b4bd" stroke="#c8d7d4" stroke-width="2"/><path d="M133 140l42 38-4-40" fill="#719ba5"/>
-<path d="M27 121c34 8 68 9 110 3 44-6 80-14 102-15-20 20-63 35-116 39-43 3-72-8-96-27" fill="#dae4dc" opacity=".75"/>
-<circle cx="58" cy="115" r="4" fill="#1f3540"/><path d="M83 118q8 13 12 24M95 116q8 14 12 26M107 113q8 14 12 25" fill="none" stroke="#355766" stroke-width="3"/><path d="M26 130q15 5 29 3" stroke="#3b5e6c" stroke-width="2" fill="none"/><g fill="#d5e7e4" opacity=".8"><circle cx="210" cy="51" r="3"/><circle cx="218" cy="41" r="2"/><circle cx="227" cy="54" r="2"/></g></svg><figcaption class="shark-card-bottom">shark week is every week</figcaption></figure>
-      <div class="car-wink">BLUE CAR. LEOPARD WHEEL.</div>
-      <div class="gold-disc" aria-label="Gold seal, 444"><b>444</b><span>GOOD LUCK</span></div>
-      <div class="art-caption">the shark hood still makes me laugh.</div>
-    </div>
+
   </div>
 </section>
 
@@ -208,6 +197,7 @@ h1{font-size:clamp(63px,7.3vw,110px);line-height:.93;letter-spacing:-1.9px;margi
   ];
   function show(id){
     screens.forEach(s=>$(s).hidden=s!==id);
+    document.body.classList.toggle('proposal-active',id==='proposalScreen');
     if(id!=='proposalScreen'){
       const no=$('noBtn'); document.querySelector('.answers').appendChild(no);
       no.style.position='relative'; no.style.left=''; no.style.top='';
