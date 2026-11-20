@@ -41,25 +41,28 @@ h1{font-size:clamp(63px,7.3vw,110px);line-height:.93;letter-spacing:-1.9px;margi
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 
-/* Homepage option 1: an editorial leopard print fading into the beige centre.
-   Same spot artwork as the ribbon, with its tan background removed. */
+/* Homepage: leopard spots and beige are a single fixed background.
+   The invitation is plain text on top — no box, veil, or patterned panel. */
 body.proposal-active{background:#f6f0e5}
 body.proposal-active .sky{
-  background:#f6f0e5;
-}
-body.proposal-active .sky::after{
-  display:block;
-  content:"";
-  opacity:1;
-  position:absolute;
+  position:fixed;
   inset:0;
-  background-image:var(--leopard-spots);
-  background-position:center center;
-  background-repeat:repeat;
-  background-size:150px 142px;
-  -webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 54%,transparent 0%,transparent 54%,rgba(0,0,0,.11) 69%,rgba(0,0,0,.64) 87%,#000 100%);
-  mask-image:radial-gradient(ellipse 70% 65% at 50% 54%,transparent 0%,transparent 54%,rgba(0,0,0,.11) 69%,rgba(0,0,0,.64) 87%,#000 100%);
+  background-color:#f6f0e5;
+  background-image:
+    radial-gradient(ellipse 67% 82% at 50% 51%,
+      #f6f0e5 0%,
+      #f6f0e5 49%,
+      rgba(246,240,229,.98) 59%,
+      rgba(246,240,229,.76) 72%,
+      rgba(246,240,229,.22) 90%,
+      rgba(246,240,229,0) 100%),
+    var(--leopard-spots);
+  background-position:center,center;
+  background-size:100% 100%,150px 142px;
+  background-repeat:no-repeat,repeat;
+  background-attachment:fixed,fixed;
 }
+body.proposal-active .sky::after{display:none}
 #proposalScreen .hero{
   display:flex;
   align-items:center;
@@ -76,20 +79,11 @@ body.proposal-active .sky::after{
   padding:clamp(40px,5vw,65px) clamp(25px,5vw,68px);
   text-align:center;
   position:relative;
-  isolation:isolate;
-  background:transparent;
+  isolation:auto;
+  background:none;
   box-shadow:none;
 }
-/* No rectangle: a soft, seamless beige veil protects the writing if the
-   patterned edge comes close on unusual aspect ratios. */
-#proposalScreen .hero-copy::before{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  pointer-events:none;
-  inset:-35px -65px;
-  background:radial-gradient(ellipse closest-side,#f6f0e5 0%,#f6f0e5 58%,rgba(246,240,229,.93) 73%,rgba(246,240,229,0) 100%);
-}
+#proposalScreen .hero-copy::before,#proposalScreen .hero-copy::after{content:none;display:none}
 #proposalScreen .eyebrow{justify-content:center}
 #proposalScreen h1{font-size:clamp(54px,7.1vw,96px);line-height:.97;margin:28px 0 29px}
 #proposalScreen .lead{max-width:620px;margin:0 auto 13px;line-height:1.85}
@@ -104,14 +98,19 @@ body.proposal-active .sky::after{
   #proposalScreen h1{font-size:clamp(54px,9.4vw,80px)}
 }
 @media(max-width:560px){
-  body.proposal-active .sky::after{
-    background-size:116px 110px;
-    -webkit-mask-image:radial-gradient(ellipse 82% 63% at 50% 52%,transparent 0%,transparent 57%,rgba(0,0,0,.14) 72%,#000 100%);
-    mask-image:radial-gradient(ellipse 82% 63% at 50% 52%,transparent 0%,transparent 57%,rgba(0,0,0,.14) 72%,#000 100%);
+  body.proposal-active .sky{
+    background-image:
+      radial-gradient(ellipse 78% 78% at 50% 50%,
+        #f6f0e5 0%,
+        #f6f0e5 52%,
+        rgba(246,240,229,.99) 65%,
+        rgba(246,240,229,.83) 81%,
+        rgba(246,240,229,.3) 96%),
+      var(--leopard-spots);
+    background-size:100% 100%,116px 110px;
   }
   #proposalScreen .hero{min-height:calc(100svh - 125px);padding:42px 12px 60px}
   #proposalScreen .hero-copy{padding:33px 16px}
-  #proposalScreen .hero-copy::before{inset:-26px -12px}
   #proposalScreen h1{font-size:clamp(50px,12.2vw,68px);margin:21px 0 24px}
   #proposalScreen .lead{font-size:13.5px;line-height:1.75}
   #proposalScreen .question{font-size:22px;margin:22px 0 14px}
